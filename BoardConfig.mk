@@ -100,6 +100,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEVICE_VERSION := perilouspike-beta2
 TW_NO_SCREEN_BLANK := true
+TW_ENABLE_FS_COMPRESSION := true
 
 # Dynamic partition
 BOARD_SUPER_PARTITION_GROUPS := main
@@ -122,6 +123,8 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 # Excludes
 TW_EXCLUDE_TWRP_APP := true
 TW_EXCLUDE_APEX := true
+TW_EXCLUDE_NANO := true 
+TW_EXCLUDE_PYTHON := true 
 
 # Debug-tools
 TWRP_INCLUDE_LOGCAT := true
