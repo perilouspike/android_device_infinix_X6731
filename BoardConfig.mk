@@ -9,8 +9,8 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
+#AB_OTA_UPDATER := true
+#AB_OTA_PARTITIONS += \
     system \
     vendor \
     product \
@@ -86,7 +86,7 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Metadata
-BOARD_USES_METADATA_PARTITION := true
+#BOARD_USES_METADATA_PARTITION := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -113,13 +113,13 @@ BOARD_MAIN_PARTITION_LIST  := \
        vendor
 
 # 
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+#ARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB += $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
+#TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO_FBE := true
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # Excludes
 TW_EXCLUDE_TWRP_APP := true
