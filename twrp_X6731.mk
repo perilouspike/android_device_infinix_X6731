@@ -32,7 +32,7 @@ $(call inherit-product-if-exists, vendor/twrp/config/common.mk)
 $(call inherit-product-if-exists, vendor/pb/config/common.mk)
 
 # Inherit from Infinix-X666B device
-$(call inherit-product, device/infinix/X666B/device.mk)
+$(call inherit-product, device/infinix/X6731/device.mk)
 
 # Device Target Name
 PRODUCT_RELEASE_NAME := X6731
