@@ -68,7 +68,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/11230000.mmc
+#BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/11230000.mmc
 #BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery  # TODO: Used in other device tree. Do we need it?
 
 # Args
@@ -185,6 +185,9 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 TARGET_USES_MKE2FS := true
 TW_HAS_NO_RECOVERY_PARTITION := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_LOAD_VENDOR_MODULES := true
+TW_LOAD_VENDOR_MODULES := "novatek_ts_fw.bin novatek_ts_fw_tm.bin novatek_ts_fw_144.bin novatek_ts_fw_jdi.bin"
 
 # Excludes
 TW_EXCLUDE_APEX := true
