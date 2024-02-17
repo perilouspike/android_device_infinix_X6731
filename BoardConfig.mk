@@ -165,6 +165,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
+TW_USE_FSCRYPT_POLICY := 2
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
@@ -188,15 +189,19 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_LOAD_VENDOR_MODULES := true
 TW_LOAD_VENDOR_MODULES := "novatek_ts_fw.bin novatek_ts_fw_tm.bin novatek_ts_fw_144.bin novatek_ts_fw_jdi.bin"
+TW_FRAMERATE := 60
 
 # Excludes
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRP_APP := true
+TW_EXCLUDE_LPDUMP := true
 
 # Include binaries
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_LPTOOLS := true
+TW_INCLUDE_FB2PNG := true
 
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true
@@ -216,4 +221,4 @@ TW_CUSTOM_CPU_POS := 580
 TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
-TW_DEVICE_VERSION := perilouspike/beta1
+TW_DEVICE_VERSION := perilouspike
