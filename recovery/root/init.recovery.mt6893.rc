@@ -3,12 +3,12 @@ import /init.trustonic.rc
 
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
-    chmod 0777 /system/bin/postrecoveryboot.sh
+    chmod 0777 /system/bin/runatboot.sh
 
     mkdir /mnt/vendor/persist 0700 root root
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 
-service postrecoveryboot /system/bin/postrecoveryboot.sh
+service runatboot /system/bin/runatboot.sh
     user root
     group root
     disabled
@@ -21,6 +21,8 @@ on fs
     setprop crypto.ready 1
 
 on post-fs
+    start boot-hal-1-2
+
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
     symlink /dev/block/sda /dev/block/mmcblk0boot0
@@ -127,9 +129,8 @@ on property:twrp.decrypt.done=true
     stop hwservicemanager	
 	
 on boot
-    start postrecoveryboot
+    start runatboot
     start health-hal-2-1
-    start boot-hal-1-2
 
 # We need vold early for metadata encryption
 on early-fs
