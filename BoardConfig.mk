@@ -190,6 +190,8 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_LOAD_VENDOR_MODULES := true
 TW_LOAD_VENDOR_MODULES := "novatek_ts_fw.bin novatek_ts_fw_tm.bin novatek_ts_fw_144.bin novatek_ts_fw_jdi.bin"
 TW_FRAMERATE := 60
+TW_Y_OFFSET := 80
+TW_H_OFFSET := -80
 
 # Excludes
 TW_EXCLUDE_APEX := true
@@ -222,3 +224,8 @@ TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
+
+#PBRP_FLAGS
+PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+PB_TORCH_MAX_BRIGHTNESS := 1
+PB_DISABLE_DEFAULT_DM_VERITY := true
