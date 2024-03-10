@@ -192,6 +192,7 @@ TW_LOAD_VENDOR_MODULES := "novatek_ts_fw.bin novatek_ts_fw_tm.bin novatek_ts_fw_
 TW_FRAMERATE := 60
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
+TW_NO_FASTBOOT_BOOT := true
 
 # Excludes
 TW_EXCLUDE_APEX := true
