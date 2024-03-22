@@ -96,3 +96,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
+
+# Recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libxml2
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
